@@ -1,0 +1,27 @@
+using System;
+
+public abstract class Employee
+{
+    public abstract int Salary { get; }
+}
+
+public class Developer : Employee
+{
+    public override int Salary { get { return 5000; } }
+}
+
+public class Driver : Employee
+{
+    public override int Salary { get { return 3000; } }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        Employee emp1 = new Developer();
+        Employee emp2 = new Driver();
+        Console.WriteLine("Salary of developer: " + emp1.Salary);
+        Console.WriteLine("Salary of driver: " + emp2.Salary);
+    }
+}
